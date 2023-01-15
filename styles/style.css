@@ -305,7 +305,7 @@ banner styles
 
 /* footer */
 
-.footer-container p {
+.footer-container {
     font-weight: 400;
     font-size: 20px;
     max-width: 1200px;
@@ -314,4 +314,62 @@ banner styles
     color: #424242;
     padding: 38px 250px;
     border-radius: 5px;
+}
+
+/* media quaries for mobile */
+
+@media only screen and (max-width:576px) {
+    body {
+        padding-left: 20px;
+    }
+
+    .nav-container,
+    .nav-container ul,
+    .features-container,
+    .features-list-container,
+    .facts-details {
+        flex-direction: column;
+    }
+
+    .banner-img img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .features-img {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .features-details,
+    .facts-details,
+    .lists,
+    .some-facts-container {
+        text-align: center;
+    }
+
+    .list,
+    .fact,
+    .features-list-img img {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .facts-description {
+        margin-left: 0;
+    }
+
+    .sponsonrs-details p {
+        padding: 24px 0;
+    }
+
+    .special-btn {
+        margin-top: 80px;
+    }
+
+    .footer-container {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
 }
