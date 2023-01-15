@@ -109,7 +109,9 @@ banner styles
     padding-bottom: 20px;
 }
 
-/* features styles */
+/* ..............
+features styles 
+................*/
 
 .features-container {
     display: flex;
@@ -127,7 +129,7 @@ banner styles
     column-gap: 24px;
 }
 
-.features-img>img {
+.features-img img {
     width: 250px;
     height: 250px;
 }
@@ -144,7 +146,21 @@ banner styles
     padding: 32px 0;
 }
 
-/* features list container */
+.grey {
+    color: #727272;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.color {
+    color: #FF900C;
+}
+
+/* ......................
+features list container 
+........................*/
 
 .features-list-container {
     display: flex;
@@ -161,6 +177,7 @@ banner styles
     font-weight: 700;
     font-size: 45px;
     color: #131313;
+    margin-left: 10px;
 }
 
 .lists {
@@ -188,6 +205,11 @@ banner styles
     font-weight: 400;
     font-size: 16px;
     color: #727272;
+}
+
+.vl {
+    border-left: 3px solid #FF900C;
+    height: 110px;
 }
 
 .features-list-img {}
@@ -219,7 +241,41 @@ banner styles
     font-size: 18px;
 }
 
-/* facts section styles */
+/* .......................
+featured container styles 
+.........................*/
+
+.featured-container {
+    display: flex;
+    width: 1100px;
+    margin: 150px auto;
+    gap: 20px;
+}
+
+
+.featured-title {
+    font-weight: 700;
+    font-size: 40px;
+    color: #131313;
+}
+
+.featured-description {
+    font-weight: 400;
+    font-size: 16px;
+    color: #727272;
+    padding: 32px 0;
+}
+
+.featured-img img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ..................
+facts section styles 
+....................*/
+
 .facts-description {
     margin-left: 100px;
 }
@@ -252,8 +308,15 @@ banner styles
     padding: 20px;
     border: 1px solid #FF900E;
     border-radius: 5px;
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+.fact:hover {
+    transform: scale(1.1);
+
 }
 
 .fact p {
@@ -269,7 +332,18 @@ banner styles
     color: #727272;
 }
 
-/* sponsors and brand */
+.fact img {
+    transition: 3s ease;
+    ;
+}
+
+.fact:hover img {
+    transform: rotate(360deg);
+}
+
+/* .................
+sponsors and brand 
+...................*/
 
 .sponsonrs-details {
     text-align: center;
@@ -303,7 +377,13 @@ banner styles
     opacity: .7;
 }
 
-/* footer */
+
+
+
+
+/* ......
+footer 
+........*/
 
 .footer-container {
     font-weight: 400;
@@ -316,7 +396,9 @@ banner styles
     border-radius: 5px;
 }
 
-/* media quaries for mobile */
+/* .......................
+media quaries for mobile
+....................... */
 
 @media only screen and (max-width:576px) {
     body {
@@ -327,12 +409,15 @@ banner styles
     .nav-container ul,
     .features-container,
     .features-list-container,
-    .facts-details {
+    .facts-details,
+    .featured-container {
         flex-direction: column;
     }
 
-    .banner-img img {
+    .banner-img img,
+    .features-img img {
         width: 100%;
+        height: auto;
         object-fit: cover;
     }
 
@@ -347,12 +432,38 @@ banner styles
         text-align: center;
     }
 
+    .featured-container {
+        flex-direction: column;
+        margin: 80px 0;
+    }
+
+    .featured-details {
+        text-align: center;
+        height: auto;
+        width: 33%;
+    }
+
+    .featured-description {
+        margin: 20px 10px;
+        padding: 10;
+
+    }
+
+    .featured-img img {
+        width: 350px;
+    }
+
     .list,
     .fact,
     .features-list-img img {
         width: 100%;
-        height: 100%;
+        height: auto;
         text-align: center;
+    }
+
+    .vl {
+        height: 160px;
+        margin-bottom: 10px;
     }
 
     .facts-description {
